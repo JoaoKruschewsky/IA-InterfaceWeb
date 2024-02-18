@@ -1,0 +1,354 @@
+* {
+	/* Remove a margem externa de todos os lados do elemento. */
+	margin: 0;
+  
+	/* Remove o espaçamento interno de todos os lados do elemento. */
+	padding: 0;
+  
+	/* Inclui o preenchimento e a borda na largura e altura. */
+	box-sizing: border-box;
+  }
+  
+  body {
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+  
+	/* Quebra de linha quando os itens não couberem na largura da tela. */
+	flex-wrap: wrap;
+  
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+  
+	/* Margem de todos os lados. */
+	margin: 3px;
+  }
+  
+  .content-home {
+	/* Realizar a subtração de 100% da altura vertical menos a soma    */
+	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
+	/* background: linear-gradient(135deg, #5C805B, #dff8e3);*/
+	/* background-image: url(/static/images/banco.jpg) !important;
+	  background-size: cover;
+	  background-repeat: no-repeat; /* Isso evita a repetição da imagem 
+	  background-attachment: fixed; */
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	height: 100vh;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	position: relative;
+	gap: 5px;
+	max-width: 100% !important;
+	background-color: #fff;
+  }
+  
+  .conteudo-principal {
+	display: grid;
+	grid-template-columns: 1fr;
+	position: relative;
+	gap: 10px;
+	max-width: 100% !important;
+	background: #dff8e3;
+	overflow-x: hidden;
+  }
+  aside,
+  footer {
+	/* Cor do fundo. */
+	background: #dff8e3;
+  
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+  
+	/* Margem externa de todos os lados. */
+	margin: 3px;
+  }
+  header {
+	background: #dff8e3;
+	display: flex;
+	/* Altura do elemento. */
+	height: 100px;
+	background-color: #5c805b;
+	justify-content: space-between;
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+  }
+  header i {
+	font-size: 40px;
+	padding: 10px;
+	transition: transform 0.2s;
+	color: white;
+  }
+  header i:hover {
+	transform: scale(1.1);
+  }
+  .user-mostrar {
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+	position: relative;
+	right: 100px;
+  }
+  .user-mostrar i {
+	font-size: 22px;
+  }
+  .info-header {
+	color: RGB(0, 0, 0);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .logo {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 25px;
+	color: white;
+  }
+  .h3-icone-user {
+	color: RGB(0, 0, 0);
+  }
+  .icone-guia-pesquisar {
+	display: flex;
+  }
+  .icone-header {
+	display: flex;
+	justify-content: flex-start;
+  }
+  
+  .nav-links {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	max-width: 250px;
+	background-color: #dff8e3;
+	width: 250px;
+	min-width: 100%;
+  }
+  .nav-links a {
+	padding: 8px 13px;
+	display: block;
+	color: #203b22;
+	text-decoration: none;
+	width: 100%;
+	transition: transform 0.2s;
+  }
+  .nav-links a:hover {
+	background-color: #95ec7f;
+	border-left: 6px solid green;
+	color: black;
+	transform: scale(1.1);
+  }
+  
+  .nav-links i {
+	margin-right: 5px;
+  }
+  
+  /* Nav da seta pra baixo */
+  .bars-main {
+	margin-top: 5px;
+	margin-right: 2px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: RGB(101, 211, 128);
+	width: 200px;
+	height: 75%;
+	border-radius: 8px;
+  }
+  .close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 20px;
+  }
+  
+  .navbars img {
+	position: relative;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 110px;
+	height: 110px;
+	border-radius: 80px;
+	margin-left: 3px;
+  }
+  #icone-navbars {
+	font-size: 80px;
+  }
+  .navbars {
+	background-color: transparent;
+	width: 100%;
+	height: 100%;
+  }
+  .navbars h3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 15px;
+	font-size: 30px;
+  }
+  .linha {
+	width: 100%;
+	height: 3px;
+	border: solid 2px;
+  }
+  .navbars a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	margin-left: 3px;
+	transition: transform 0.2s;
+  }
+  .navbars a:hover {
+	transform: scale(1.08);
+	background-color: #f1e9ea;
+	border-left: 8px solid #1b4001;
+  }
+  /* fim da nav da seta pra baixo */
+  .slider {
+	width: 2000px;
+	height: 500px;
+	overflow: hidden;
+	max-width: calc(100% - 260px) !important;
+  }
+  
+  .slides {
+	width: 400%;
+	height: 500px;
+	display: flex;
+  }
+  .slides input {
+	display: none;
+  }
+  .slide {
+	position: relative;
+	width: 25%;
+	transition: 2s;
+  }
+  
+  .manual-navigation {
+	position: absolute;
+	margin-top: -40px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  }
+  .manual-btn {
+	border: 2px solid black;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+  }
+  .manual-btn:not(:last-child) {
+	margin-right: 40px;
+  }
+  .manual-btn:hover {
+	background-color: black;
+  }
+  
+  #radio1:checked ~ .first {
+	margin-left: 0;
+  }
+  #radio2:checked ~ .first {
+	margin-left: -25%;
+  }
+  #radio3:checked ~ .first {
+	margin-left: -50%;
+  }
+  #radio4:checked ~ .first {
+	margin-left: -75%;
+  }
+  .navigation-auto div {
+	border: 2px solid #20a6ff;
+	padding: 5px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+  }
+  .navigation-auto {
+	position: absolute;
+	width: 100%;
+	margin-top: 460px;
+	display: flex;
+	justify-content: center;
+  }
+  
+  .navigation-auto div:not(:last-child) {
+	margin-right: 40px;
+  }
+  #radio1:checked ~ .navigation-auto .auto-btn1 {
+	background-color: black;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2 {
+	background-color: black;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3 {
+	background-color: black;
+  }
+  #radio4:checked ~ .navigation-auto .auto-btn4 {
+	background-color: black;
+  }
+  
+  /* CSS SERVICOS */
+  .servicos h3 {
+	margin-left: 20px;
+	font-size: 30px;
+	font-family: "Heveltica Neue", sans-serif;
+  }
+  .servicos-container {
+	width: calc(100% - 250px);
+	display: block;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  }
+  
+  .box-services {
+	margin-top: 10px;
+	display: flex;
+	width: 100%;
+  }
+  .services {
+	margin-top: 60px;
+	max-width: 250px;
+	height: 250px;
+	display: block;
+	text-align: center;
+	transition: 500ms linear;
+	justify-content: space-between;
+  }
+  .services:hover {
+	-webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+	filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
+	background: #a7f3b4;
+  }
+  .services i {
+	font-size: 100px;
+	margin-top: 8px;
+  }
+  .services h3 {
+	font-size: 30px;
+	font-family: "Heveltica Neue", sans-serif;
+	margin-top: 20px;
+	margin-bottom: 40px;
+  }
+  .services span {
+	font-size: 20px;
+	font-family: "Heveltica Neue", sans-serif;
+  }

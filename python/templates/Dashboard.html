@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="https://kit.fontawesome.com/808cb3fb50.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+    <header>    
+        <img src="/static/css/LOGO.jpg">
+
+        <div class="info-header">
+            <div class="logo">
+              <h1>Gestao de Banco</h1>
+            </div>
+      
+          </div>
+          
+            <div class="user-mostrar">
+                <i class="fa-solid fa-user"></i> <h3 class="h3-icone-user">Olá, Joao</h3> <a href="#"  id="showbars"><i class="fa-solid fa-arrow-down"></i></a>
+        </div> 
+           <!-- <i class="fa-solid fa-bars"></i></a> -->
+
+    </header>
+
+    <nav>
+         <a href="/home"> <i class="fa-solid fa-house"></i>HOME</a>
+        <hr>
+        <br>
+        <a href="/churn"> <i class="fa-solid fa-person"></i>PREVISÃO DE CHURN</a> 
+        <hr>
+        <br>
+        <a href="/dashboard"> <i class="fa-solid fa-table-columns"></i>Dashboard</a>
+        <hr>
+        <br>
+        <a href="/relatorio"> <i class="fa-solid fa-table"></i> Relatorio</a>
+                <hr>
+    </nav>
+    <template id="bars" class="temaplate-bars">
+        <button id="close-bars" class="close-button">X</button>
+
+        <nav class="navbars">
+  
+          <!--<div class="icon-navbar">
+          </div> -->
+          <img   src="/static/css/user.png" alt="">
+          <h3 >Olá, Joao</h3> 
+          <br>
+        <div class="linha"></div>
+          <br>
+           <a href=""> <i class="fa-solid fa-face-smile"></i> Conta</a>
+           <hr>
+          <br>
+           <a href=""> <i class="fa-solid fa-gear"></i> Configuracoes </a><hr>
+          <br>
+           <a href=""> <i class="fa-solid fa-question"></i> Fale conosco </a><hr>
+           <br>
+           <a href=""> <i class="fa-solid fa-person"></i> Sobre-nós </a>
+        </nav>
+     
+    </template>
+    <main class="main-conteudo">
+
+        <div class=" titulo-dash">
+            <h2> <i class="fa-solid fa-table-columns"> </i> Dashboard </h2>
+            <br>
+            <hr class="separador">
+            <br>
+            <p><i class="fa-solid fa-house"></i> / Dashboard Danki</p>
+        </div>
+        <br>
+        <div class="conteudo-dashboard" >
+            <div class="box-info">
+                <div class="box-info-vendas">
+                    <div class="info-text">
+                        <h3 >Total de Vendas</h3>
+                       <h2 class="text-number"> <span>R$5,000</span>
+                                                                    </h2>
+                    </div>
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                </div>
+                <div class="box-info-pedidos">
+                    <div class="info-text">
+                        <h3>Total de Pedidos</h3>
+                        <h2 class="text-number"> <span>R$3,000</span></h2>                    </div>
+                        <i class="fa-solid fa-code-pull-request"></i>
+                </div>
+                <div class="box-info-precos">
+                    <div class="info-text">
+                        <h3>Média de Precos</h3>
+                        <h2 class="text-number"> <span>R$2,000</span></h2>           
+                             </div>
+                             <i class="fa-solid fa-tag"></i>
+                </div>
+            </div>
+            <div class="graficos">
+                <div class="grafico-vendas"  >
+                   <canvas id="myChart"></canvas>
+                </div>
+               <div class="grafico-media">
+                
+                    <canvas id="salesChart"></canvas>
+               
+               </div>
+
+            </div>
+            <div class="feed-grafics">
+            <div class="feed">
+                <div class="titulo-feed">
+                    <h3>Feed</h3>
+                </div>
+                <div class="feed-contents">
+                <div class="feed-unico">
+                    <div class="feed-text">
+                        <div class="icone-circle" style="background-color: red;"><i class="fa-solid fa-bell"></i></div>
+                        <span>Voce tem 3 pedidos em andamento</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>30 minutos atrás</h3>
+                    </div>
+                </div>
+                <div class="feed-unico">
+                    <div class="feed-text">
+                        <div class="icone-circle" style="background-color: aqua;"><i
+                                class="fa-solid fa-credit-card"></i></div>
+                        <span>Voce nova solicitacao de cartao de crédito</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>Agora</h3>
+                    </div>
+                </div>
+                <div class="feed-unico">
+                    <div class="feed-text">
+                        <div style="background-color: rgb(47, 255, 141);" class="icone-circle"><i
+                                class="fa-solid fa-cart-shopping"></i></div>
+                        <span>Voce tem um novo pedido</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>2 horas atras</h3>
+                    </div>
+                </div>
+                <div class="feed-unico">
+                    <div class="feed-text">
+                        <div style="background-color: rgb(47, 255, 141);" class="icone-circle"><i
+                                class="fa-solid fa-cart-shopping"></i></div>
+                        <span>Novo pedido feito</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>30 minutos atrás</h3>
+                    </div>
+                </div>
+                <div class="feed-unico">
+                    <div class="feed-text">
+                        <div class="icone-circle" style="background-color: indianred;"><i
+                                class="fa-regular fa-file"></i></div>
+                        <span>Voce tem 3 tarefas pendente</span>
+                    </div>
+                    <div class="feed-time">
+                        <h3>1 hora atras</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="grafico-dounat">
+                <canvas id="Chart-linhas"></canvas>
+                
+            </div>
+        </div>
+        </div> <!--Conteudo do Dashboard--> <!--Container do Dashboard-->
+    </main>
+    <main id="main-bars"  style="display: none;" class="bars-main"></main>
+
+   <script>
+    // Abri a seta pra baixo
+  
+   
+
+   </script>
+</body>
+
+</html>

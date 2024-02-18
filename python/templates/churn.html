@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br"></html>
+<html>
+
+<head>
+    <title>Previsão de Cancelamento de Clientes</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/churn.css">
+    <script src="https://kit.fontawesome.com/808cb3fb50.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <script src="static/js/churn.js"></script>
+    <header>
+        <img src="/static/css/LOGO.jpg">
+
+        <div class="info-header">
+            <div class="logo">
+                <h1>Gestao de Banco</h1>
+            </div>
+
+        </div>
+
+        <div class="user-mostrar">
+            <i class="fa-solid fa-user"></i>
+            <h3 class="h3-icone-user">Olá, Joao</h3> <a href="#" id="showbars"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <!-- <i class="fa-solid fa-bars"></i></a> -->
+
+    </header>
+    <nav>
+        <a href="/home"> <i class="fa-solid fa-house"></i>HOME</a>
+        <hr>
+        <br>
+        <a href="/churn"> <i class="fa-solid fa-person"></i>PREVISÃO DE CHURN</a>
+        <hr>
+        <br>
+        <a href="/dashboard"> <i class="fa-solid fa-table-columns"></i>Dashboard</a>
+        <hr>
+        <br>
+        <a href="/relatorio"><i class="fa-solid fa-table"></i>Relatorio</a>
+        <hr>
+    </nav>
+    <template id="bars" class="template-bars">
+        <button id="close-bars" class="close-button">X</button>
+
+        <nav class="navbars">
+
+            <!--<div class="icon-navbar">
+          </div> -->
+            <img src="/static/css/user.png" alt="">
+            <h3>Olá, Joao</h3>
+            <br>
+            <div class="linha"></div>
+            <br>
+            <a href=""> <i class="fa-solid fa-face-smile"></i> Conta</a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-gear"></i> Configuracoes </a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-question"></i> Fale conosco </a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-person"></i> Sobre-nós </a>
+        </nav>
+
+    </template>
+
+    <main class="churn-content">
+
+        <div class="container" style="height: 80%;">
+            <form method="POST" action="/predict">
+                 <div class="title">Previsão de Churn</div>
+                
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="ScoreDeCredito">Score de Crédito:</label>
+                        <input type="number" name="ScoreDeCredito" placeholder="Score de Crédito" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Idade">Idade:</label>
+                        <input type="number" name="Idade" placeholder="Idade" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="TempoDeAssociacao">Tempo de Associação (em meses):</label>
+                        <input type="number" name="TempoDeAssociacao" placeholder="Tempo de Associação" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Saldo">Saldo:</label>
+                        <input type="number" name="Saldo" placeholder="Saldo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="NumDeProdutos">Número de Produtos:</label>
+                        <input type="number" name="NumDeProdutos" placeholder="Número de Produtos" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="SalarioEstimado">Salário Estimado:</label>
+                        <input type="number" name="SalarioEstimado" placeholder="Salário Estimado" required>
+                    </div>
+                </div>
+
+                <div class="input-select-group">
+                    <div class="input-select">
+                        <label for="TemCartaoCred">Tem Cartão de Crédito:</label>
+                        <select name="TemCartaoCred">
+                            <option value="" disabled selected>Tem Cartão de Crédito ?</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-select">
+                        <label for="MembroAtivo">Membro Ativo:</label>
+                        <select name="MembroAtivo">
+                            <option value="" disabled selected>É um membro ativo ?</option>
+                            <option value="1">Sim</option>
+                            <option value="0">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-select">
+                        <label for="Genero_Male">Genero:</label>
+                        <select name="Genero_Male">
+                            <option value="" disabled selected>Selecione um Gênero</option>
+                            <option value="1">Masculino</option>
+                            <option value="0">Feminino</option>
+                        </select>
+                    </div>
+
+                    <div class="input-select">
+                        <label for="Pais_codificado">Pais:</label>
+                        <select name="Pais_codificado">
+                            <option value="" disabled selected >Selecione um Pais</option>
+                            <option value="0">Alemanha</option>
+                            <option value="1">França</option>
+                            <option value="2">Espanha</option>                            
+                        </select>
+                    </div>
+                </div>
+
+                <div class="predicao" >
+                    <button class="btn_pred" type="submit" >Prever Cancelamento</button>
+                </div>
+            </form>
+        </div>       
+    </main>
+    <main id="main-bars" style="display: none;" class="bars-main"></main>
+
+    
+</body>
+
+</html>

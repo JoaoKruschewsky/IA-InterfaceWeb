@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+/* Propriedades que se aplicam a todos os elementos da página. */
+* {
+	/* Remove a margem externa de todos os lados do elemento. */
+	margin: 0;
+
+	/* Remove o espaçamento interno de todos os lados do elemento. */
+	padding: 0;
+
+	/* Inclui o preenchimento e a borda na largura e altura. */
+	box-sizing: border-box;
+}
+
+body {
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+
+	/* Quebra de linha quando os itens não couberem na largura da tela. */
+	flex-wrap: wrap;
+
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+
+	/* Margem de todos os lados. */
+	margin: 3px;
+}
+
+/* Formatação comum entre os elementos. */
+ nav, .main-conteudo, aside, footer {
+	/* Cor do fundo. */
+	background: #dff8e3;
+
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+
+	/* Margem externa de todos os lados. */
+	margin: 3px;
+}
+
+
+/* Seletores para formatação individual. */
+
+header {
+    background: #dff8e3;
+
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+
+	/* Altura do elemento. */
+	height: 100px;
+	background-color: #5C805B;
+    justify-content: space-between;
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+}
+header i {
+    font-size: 40px;
+    padding: 10px;
+    transition: transform 0.2s;
+    color: white;
+}
+header i:hover {
+    transform: scale(1.1);
+}
+.user-mostrar {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    position: relative;
+    right: 100px;
+}
+.user-mostrar i {
+    font-size: 22px;
+}
+.info-header {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.h3-icone-user{
+    color: rgb(0, 0, 0);
+}
+.icone-guia-pesquisar {
+    display: flex;
+}
+.icone-header {
+ display: flex;
+ justify-content: flex-start;
+
+}
+
+.main-conteudo {
+	/* Realizar a subtração de 100% da altura vertical menos a soma    */
+	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
+	height: 100%;
+	background: linear-gradient(135deg, #5C805B, #dff8e3);
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 20 1 500px;
+	flex-direction: column;
+	position: relative;
+
+	
+}
+
+
+
+	/* Alinha os itens na vertical. */
+    nav {
+		flex: 1 1 200px;
+		flex-direction: column;
+		padding: 20px;    
+}
+
+.conteudo-dashboard {
+    background-color: #f6f7fb;
+    margin-left: 2px;
+    margin-right: 2px;
+    height: 100%;
+}
+.titulo-dash {
+	background-color: #f6f7fb;
+    padding: 20px;
+    margin: 2px 2px;
+    display: block;
+}
+i.fa-table-columns {
+    width: 20px;
+    height: 20px;
+}
+.titulo-dash h2 {
+    font-size: 19px;
+}
+.box-info {
+    width:100%;
+    margin-top: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+
+   
+}
+.box-info i {
+    font-size: 30px;
+    margin-right: 20px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.box-info i:hover {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+
+.box-info-vendas {
+    width: 25%;
+    background:linear-gradient(45deg, #FF5370, #ff869a);
+    border-style: outset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+      background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 5px
+
+    
+}
+
+.box-info-pedidos{
+    width: 25%;
+    background:linear-gradient(45deg, #41af26, #0ec569);
+    border-style: outset;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 10px;
+    transition: transform 0.2s;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 5px
+
+}
+.box-info-precos {
+    width: 25%;
+    background:#4099ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: 5px
+
+}
+.box-info-precos:hover, .box-info-vendas:hover, .box-info-pedidos:hover {
+    transform: scale(1.1);
+}
+.text-number {
+    font-family: poppins,sans-serif;
+    margin-top: 10px;
+    margin-left: 30px;
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+    font-size: 32px;
+
+}
+
+.info-text h3 {
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    margin-left: 30px;
+
+
+}
+.graficos{
+    display: flex;
+    justify-content: space-between;
+}
+.grafico-vendas {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 40%;
+    background-color: white;
+    transition: all 0.5s;
+    cursor: pointer
+    
+}
+.grafico-vendas:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+.grafico-media {
+    width: 40%;
+    margin-top: 40px;
+    margin-right: 20px;
+    background-color: white;
+    transition: all 0.5s;
+    cursor: pointer
+}
+.grafico-dounat {
+    width: 55%;
+    display: flex;
+    background-color: white;
+    transition: all 0.5s;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 20px;
+
+}
+.grafico-dounat:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));}
+.feed-grafics {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grafico-media:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+
+.titulo-feed {
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1; /* Define um índice de ordem para a div.titulo-feed */
+}
+.feed {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 350px;
+    padding: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+
+
+}
+.feed:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+
+}
+.feed-unico {
+    display: flex;
+    justify-content: space-between;   
+     transition: transform 0.2s;
+     height: 18%;
+     margin-top: 10px;
+
+    
+}
+.feed-contents {
+    display: flex;
+    flex-direction: column-reverse; /* Inverte a ordem dos elementos */
+    transition: transform 0.5s ease; /* Adiciona uma transição de deslizamento suave */
+}
+
+.feed-unico:hover{
+    transform: scale(1.05);
+
+}
+.feed-text {
+    display: flex;
+    font-family: popins,sans-serif;
+    font: 100;
+}
+.feed-text span {
+    color: black;
+    margin: 8px;
+    font-size: large;
+   
+}
+.feed-text .icone-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.feed-text i {
+    font-size: 20px;
+}
+.feed-time {
+    color: #444;
+    font-size: 15px;
+}
+nav a {
+    
+        padding: 8px 13px;
+        display: block;
+		color: #203B22;
+		text-decoration: none;
+		width: 100%;
+        transition: transform 0.2s  ;
+}
+nav a:hover {
+    background-color: #95ec7f;
+    border-left: 6px solid green;
+    color: black;
+    transform: scale(1.1);
+}
+
+nav i {
+    margin-right: 5px;
+}
+
+
+/* sETA PRA Baixo */
+.bars-main {
+    margin-top: 5px;
+    margin-right: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:rgb(101, 211, 128) ;
+    width: 200px;
+    height: 75%;
+    border-radius: 8px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+
+.navbars img{
+    position: relative;
+    left: 20px;
+     display: flex;   
+     justify-content: center;
+     align-items: center;
+     width: 110px;
+     height: 110px;
+     border-radius: 80px;
+     margin-left: 3px;
+
+
+}
+#icone-navbars {
+    font-size: 80px;
+   
+}
+.navbars{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+ 
+}
+.navbars h3 {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+.linha {
+    width: 100%;
+    height: 3px;
+    border: solid 2px;
+}
+.navbars  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin-left: 3px;
+    transition: transform 0.2s;
+
+}
+.navbars a:hover {
+    transform: scale(1.08);
+    background-color: #f1e9ea;
+    border-left: 8px solid #1B4001;
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+a {
+	/* Remove a decoração padrão do elemento. */
+	text-decoration: none;
+
+	/* Definir a cor da fonte para o padrão do elemento pai. */
+	color: inherit;
+}
+
+@media (max-width: 768px) {
+	header {
+		height: 70px;
+	}
+	
+	header i {
+		font-size: 30px;
+	}
+	
+	.user-mostrar {
+		right: 50px;
+	}
+	
+	/* Ajustes para outros elementos... */
+}
+
+/* Dispositivos móveis */
+@media (max-width: 480px) {
+	header {
+		height: 50px;
+	}
+	
+	header i {
+		font-size: 20px;
+	}
+	
+	.user-mostrar {
+		right: 20px;
+	}
+	
+	/* Ajustes para outros elementos... */
+}

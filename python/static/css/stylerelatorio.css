@@ -1,0 +1,483 @@
+* {
+	/* Remove a margem externa de todos os lados do elemento. */
+	margin: 0;
+
+	/* Remove o espaçamento interno de todos os lados do elemento. */
+	padding: 0;
+
+	/* Inclui o preenchimento e a borda na largura e altura. */
+	box-sizing: border-box;
+}
+
+body {
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+
+	/* Quebra de linha quando os itens não couberem na largura da tela. */
+	flex-wrap: wrap;
+
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+
+	/* Margem de todos os lados. */
+	margin: 3px;
+}
+
+.content-relatorio{
+	/* Realizar a subtração de 100% da altura vertical menos a soma    */
+	/* da altura dos elementos ( 400px ) com as suas margens ( 36px ). */
+	/* background: linear-gradient(135deg, #5C805B, #dff8e3);*/
+	/* background-image: url(/static/images/banco.jpg) !important;
+	background-size: cover;
+	background-repeat: no-repeat; /* Isso evita a repetição da imagem 
+    background-attachment: fixed; */
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	background: linear-gradient(135deg, #5C805B, #dff8e3);	height: 100%;
+	height: 100vh;
+	margin: 3px;
+	flex: 20 1 500px;
+	flex-direction: column;
+	
+} 
+
+.container {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #1B4001;
+}
+.div-financeiro, .div-ativos, .div-crescimento, .div-gestao {
+	width: 400px;
+	height: 100px;
+	display: block;
+
+
+}
+.div-financeiro i, .div-ativos i, .div-crescimento i,.div-gestao i{
+	display: block;
+	margin-bottom: 3px;
+	font-size: 20px;
+	color: white;
+	filter: brightness(100%);
+}
+.div-financeiro span, .div-ativos span, .div-crescimento span,.div-gestao span{
+	font-size: 20px;
+	font-family: 'Oswald';
+	color: orange;
+}
+.div-financeiro h4, .div-ativos h4, .div-crescimento h4,.div-gestao h4{
+	color: white;
+	font-family:'Exo';
+}
+.div-financeiro {
+	margin: 5px 5px;
+
+
+}
+
+.div-gestao {
+	
+}
+.div-ativos {
+	
+}
+.div-crescimento {
+	
+}
+.opcoes-relatorio{
+	display: flex;
+	width: 100%;
+	
+	
+
+}
+.ctn-single-relat {
+	display: block;
+}
+.single-relatorio {
+	display: flex;
+	margin: 30px 30px;
+	align-items: center;
+	justify-content: center;
+	width: 400px;
+	height: 100px;
+	color: white;
+	background-color: #95ec7f;
+	border: 0 solid rgba(0,0,0,.125);
+    border-radius: 5px
+}
+
+.single-relatorio span {
+	font-size: 30px;
+	padding: 8px;
+	--bs-text-opacity: 1;
+	font-weight: 600;
+    color: rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important;
+	font-family: poppins,sans-serif;
+
+}
+.single-relatorio i {
+	font-size: 40px;
+}
+/* Estilizacao do table */
+.ctn-principal {
+	width: 500px;
+	height: 700px;
+	margin-top: 30px;
+  margin-left: 90px;
+	
+
+}
+.container-relat {
+	width: 500px; /* largura desejada */
+  border: 1px solid #000; /* apenas para visualização */
+  overflow: auto;
+
+}
+.header-relatorio {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #000;
+	background-color: #f2f2f2;
+
+}
+.single-header {
+	font-family: poppins,sans-serif;
+	font-weight: bold;
+
+}
+.button-relatorio {
+	position: absolute; /* Alterando para posição absoluta */
+	right: 30px;
+}
+.btn-linha {
+	position: absolute;
+	right: 430px;
+}
+#limpar-tudo:hover, #apagar-linha:hover, .btn-linha:hover{
+	transform: scale(1.2);
+	color: red;
+}
+#limpar-tudo, #apagar-linha, .btn-linha {
+	transition: transform 250ms;
+background:transparent;
+  color:blue	;
+  font-size: 14px;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  
+}
+#limpar-tudo{
+	position: absolute;
+	right: 80px;
+}
+#apagar-linha{
+	position: absolute;
+	right: 340px;
+}
+#div-droplinha{
+	display: none;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 40px;
+	right: 500px;
+	width: 200px;
+	height: 150px;
+	background-color: white;
+	border: 1px outset;
+	border-radius: 8px;
+}
+#btn-removelinha {
+	display: inline-block;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #333;
+	border-radius: 5px;
+	background-color: #ec5a5a;
+	color: #333;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+#button-droplinha {
+	position: absolute;
+	right: 9px;
+	top: 3px;
+}
+#mostrar-input input{
+	margin: 6px;
+}
+
+.div-newlinha {
+	display: none;
+	align-items: center;
+	flex-direction: column;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 300px;
+	right: 500px;
+	background-color: white;
+	border: 1px solid;
+	border-radius: 5px;
+}
+#btn-fecharnewlinha {
+	position: absolute;
+	right: 5px;
+	top: 3px;
+}
+.div-newlinha input {
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+template {
+	display: block;
+	
+}
+
+/* Formatação comum entre os elementos. */
+nav, aside,.content-relatorio, footer {
+	/* Cor do fundo. */
+	background: #dff8e3;
+
+	/* Exibição flexível.                          */
+	/* Torna o elemento um flex container          */
+	/* e os seus elementos internos em flex-itens. */
+	display: flex;
+
+	/* Margem externa de todos os lados. */
+	margin: 3px;
+}
+header {
+	background: #dff8e3;
+	display: flex;
+	/* Altura do elemento. */
+	height: 100px;
+	background-color: #5C805B;
+    justify-content: space-between;
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+}
+header {
+	/* Altura do elemento. */
+	height: 100px;
+	background-color: #5C805B;
+    justify-content: space-between;
+	/* Junção de flex-grow, flex-shrink e flex-basis.  */
+	/* flex-grow – Habilidade de um flex item crescer. */
+	/* flex-shrink - Capacidade de redução do item.    */
+	/* flex-basis – Tamanho inicial do item.           */
+	flex: 1 1 100vw;
+}
+header i {
+    font-size: 40px;
+    padding: 10px;
+    transition: transform 0.2s;
+    color: white;
+}
+header i:hover {
+    transform: scale(1.1);
+}
+.user-mostrar {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    position: relative;
+    right: 100px;
+}
+.user-mostrar i {
+    font-size: 22px;
+}
+.info-header {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: white;
+}
+.h3-icone-user{
+    color: rgb(0, 0, 0);
+}
+.icone-guia-pesquisar {
+    display: flex;
+}
+.icone-header {
+ display: flex;
+ justify-content: flex-start;
+
+}
+
+nav {
+    flex: 1 1 200px;
+    flex-direction: column;
+    padding: 20px;    
+}
+nav a {
+    
+    padding: 8px 13px;
+    display: block;
+    color: #203B22;
+    text-decoration: none;
+    width: 100%;
+    transition: transform 0.2s  ;
+}
+nav a:hover {
+    background-color: #95ec7f;
+    border-left: 6px solid green;
+    color: black;
+    transform: scale(1.1);
+}
+
+nav i {
+    margin-right: 5px;
+}
+.bars-main {
+    margin-top: 5px;
+    margin-right: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color:rgb(101, 211, 128) ;
+    width: 200px;
+    height: 75%;
+    border-radius: 8px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+  }
+
+.navbars img{
+    position: relative;
+    left: 20px;
+     display: flex;   
+     justify-content: center;
+     align-items: center;
+     width: 110px;
+     height: 110px;
+     border-radius: 80px;
+     margin-left: 3px;
+
+
+}
+#icone-navbars {
+    font-size: 80px;
+   
+}
+.navbars{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+ 
+}
+.navbars h3 {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 30px;
+}
+.linha {
+    width: 100%;
+    height: 3px;
+    border: solid 2px;
+}
+.navbars  a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin-left: 3px;
+    transition: transform 0.2s;
+
+}
+.navbars a:hover {
+    transform: scale(1.08);
+    background-color: #f1e9ea;
+    border-left: 8px solid #1B4001;
+    
+
+
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	max-height: 100%; /* altura máxima permitida dentro da div externa */
+	overflow: hidden; 
+    
+
+}
+th, td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
+  }
+  th {
+	background-color: #f2f2f2;
+  }
+a {
+	/* Remove a decoração padrão do elemento. */
+	text-decoration: none;
+
+	/* Definir a cor da fonte para o padrão do elemento pai. */
+	color: inherit;
+}
+/*
+@media screen and (max-width: 768px) {
+	.container {
+		height: 100%;
+	}
+	.div-financeiro,
+	.div-ativos,
+	.div-crescimento,
+	.div-gestao {
+		width: 100%;
+	}
+	.single-relatorio {
+		width: 100%;
+		margin: 10px 0;
+	}
+	nav {
+		flex: 1 1 100%;
+	}
+	nav a {
+		width: auto;
+	}
+}*/
+
+/* Mais media queries para outros tamanhos de tela podem ser adicionadas aqui */
+
+/* Estilos para os outros elementos e tamanhos de tela maiores continuarão aqui */
+
+/* Exemplo de como ajustar alguns elementos para telas menores */

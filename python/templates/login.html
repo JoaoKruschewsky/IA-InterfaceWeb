@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/style_login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="area-login">
+        <div class="login">
+            <div>
+                <img src="/static/css/LOGO.jpg">
+            </div>
+
+            <form method="POST" action="/login">
+                <input name="CPF" placeholder="Matrícula" type="int">
+                <input name="senha" placeholder="Senha" type="password">
+                <button class="btn-login" type="submit">LOGIN</button>
+                <p>{{erro_text}}</p>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

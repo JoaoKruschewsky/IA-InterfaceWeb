@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/stylerelatorio.css">
+    <script src="https://kit.fontawesome.com/808cb3fb50.js" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+    <script src="{{ url_for('static', filename='js/relatorio.js') }}"></script>
+
+    <header>
+        <img src="/static/css/LOGO.jpg">
+
+        <div class="info-header">
+            <div class="logo">
+                <h1>Gestao de Banco</h1>
+            </div>
+
+        </div>
+
+        <div class="user-mostrar">
+            <i class="fa-solid fa-user"></i>
+            <h3 class="h3-icone-user">Olá, Joao</h3> <a href="#" id="showbars"><i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+        <!-- <i class="fa-solid fa-bars"></i></a> -->
+
+    </header>
+    <nav>
+        <a href="/home"> <i class="fa-solid fa-house"></i>HOME</a>
+        <hr>
+        <br>
+        <a href="/churn"> <i class="fa-solid fa-person"></i>PREVISÃO DE CHURN</a>
+        <hr>
+        <br>
+        <a href="/dashboard"> <i class="fa-solid fa-table-columns"></i>Dashboard</a>
+        <hr>
+        <br>
+        <a href="/relatorio"><i class="fa-solid fa-table"></i>Relatorio</a>
+        <hr>
+    </nav>
+    <template id="bars" class="template-bars">
+        <button id="close-bars" class="close-button">X</button>
+
+        <nav class="navbars">
+
+            <!--<div class="icon-navbar">
+          </div> -->
+            <img src="/static/css/user.png" alt="">
+            <h3>Olá, Joao</h3>
+            <br>
+            <div class="linha"></div>
+            <br>
+            <a href=""> <i class="fa-solid fa-face-smile"></i> Conta</a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-gear"></i> Configuracoes </a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-question"></i> Fale conosco </a>
+            <hr>
+            <br>
+            <a href=""> <i class="fa-solid fa-person"></i> Sobre-nós </a>
+        </nav>
+
+    </template>
+    <main class="content-relatorio">
+
+
+        <div class="opcoes-relatorio">
+            <div class="ctn-single-relat">
+                <div class="single-relatorio" style="background: linear-gradient(45deg, #41af26, #0ec569);"
+                    onclick="mostrarRelatorio('relatorio-itabuna')">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Itabuna</span>
+                </div>
+                <div class="single-relatorio" style="background:linear-gradient(45deg, #FF5370, #ff869a);">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Ilheus</span>
+                </div>
+                <div class="single-relatorio" style="background-color: #5786bd;">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Itajuipe</span>
+                </div>
+                <div class="single-relatorio" style="background: #b67924;">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Buerarema</span>
+                </div>
+                <div class="single-relatorio" style="background: #6c757d;">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Canavieiras</span>
+                </div>
+                <div class="single-relatorio" style="background: #343a40;">
+                    <i class="fa-solid fa-table"></i> <span> Relatorio Salvador</span>
+                </div>
+            </div>
+            <main class="ctn-principal"   id="main-principal"  style="display: none;"></main>
+
+        </div>
+        <div  class="div-newlinha" id="formContainer" >
+            <h3  >Nova Linha</h3> <button onclick="FecharDivlinha()" id="btn-fecharnewlinha">X</button>
+            <input type="date"  id="date-input"  placeholder="Data">
+            <input type="text"  id="descricion-input" placeholder="Descricao">
+            <input type="number"  id="value-input" placeholder="Valor">
+            <button  onclick="adicionarLinha()"> Adicionar</button>
+        </div>
+        <div id="div-droplinha" >
+          <h3 style="margin-top: 6px;"> Remover Linha </h3>  <button onclick="fechardivremoverlinha()" id="button-droplinha">x</button>
+          <br>
+        <input type="text" placeholder="ID" id="id-input" >
+        <br>
+       <button onclick="removerLinhaPorId()" id="btn-removelinha">Remover linha</button>
+    
+     </div>
+        <template id="relatorio-itabuna">
+
+            <div class="header-relatorio">
+                <div class="single-header"> Relatorio Itabuna </div> <button onclick="LimparTudo()" id="limpar-tudo">Limpar Tudo</button> <button id="apagar-linha"  onclick="mostrarinput()">Apagar Linha</button> <button class="btn-linha" onclick="mostrarForm()">Nova Linha</button> <button class="button-relatorio"
+                    onclick="fecharRelatorio()">X</button>
+            </div>
+          
+            <div class="container-relat">
+
+                <table id="relatorio">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Data</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- Aqui estão duas linhas como exemplo -->
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+       
+    </main>
+    <main id="main-bars" style="display: none;" class="bars-main"></main>
+
+   
+
+  
+</body>
+
+</html>
