@@ -17,5 +17,5 @@ Este projeto foi desenvolvido como parte de um trabalho acadêmico na matéria d
 - **HTML/CSS/JavaScript**: Desenvolvimento do frontend da aplicação.
 
 ## Como Utilizar
-3. **Execute o Servidor**: Inicie o servidor Django.
-4. **Acesse a Interface Web**: Acesse a interface web através do navegador, e faça login com as credenciais fornecidas. **( login = joao e senha = 123**)
+1. **Execute o Servidor**: Inicie o servidor Django.
+2. **Acesse a Interface Web**: Acesse a interface web através do navegador, e faça login com as credenciais fornecidas. **( login = joao e senha = 123**)
